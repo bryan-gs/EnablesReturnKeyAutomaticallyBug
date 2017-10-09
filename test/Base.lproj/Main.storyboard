@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1sU-eq-CdB">
+                                <rect key="frame" x="75" y="145" width="225" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="jnZ-kx-Rse"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1M-39-HoS">
+                                <rect key="frame" x="237.5" y="85" width="50" height="30"/>
+                                <state key="normal" title="Tap Me"/>
+                                <connections>
+                                    <action selector="onTextFieldButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NIZ-g2-cwq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxu-dT-rEJ">
+                                <rect key="frame" x="310" y="194" width="58" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="HPh-XV-yUY"/>
+                                </constraints>
+                                <state key="normal" title="Tap Me"/>
+                                <connections>
+                                    <action selector="onTextViewButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wTs-gA-s1r"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uh0-7L-ZEm">
+                                <rect key="frame" x="147.5" y="85" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Ra7-qH-iIg"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.96283637152777779" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uh0-7L-ZEm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.3" id="8wk-5V-4MU"/>
+                            <constraint firstItem="1sU-eq-CdB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q7Z-kq-5DY"/>
+                            <constraint firstItem="1sU-eq-CdB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="TU1-vB-KMc"/>
+                            <constraint firstItem="Uh0-7L-ZEm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vfa-El-3SU"/>
+                            <constraint firstItem="nxu-dT-rEJ" firstAttribute="leading" secondItem="1sU-eq-CdB" secondAttribute="trailing" constant="10" id="WCm-Dr-n6e"/>
+                            <constraint firstItem="E1M-39-HoS" firstAttribute="centerY" secondItem="Uh0-7L-ZEm" secondAttribute="centerY" id="Zy3-rG-BlG"/>
+                            <constraint firstItem="nxu-dT-rEJ" firstAttribute="centerY" secondItem="1sU-eq-CdB" secondAttribute="centerY" id="bk1-DH-V2I"/>
+                            <constraint firstItem="E1M-39-HoS" firstAttribute="leading" secondItem="Uh0-7L-ZEm" secondAttribute="trailing" constant="10" id="jVE-CU-113"/>
+                            <constraint firstItem="1sU-eq-CdB" firstAttribute="top" secondItem="Uh0-7L-ZEm" secondAttribute="bottom" constant="30" id="uaJ-7X-DYs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="Uh0-7L-ZEm" id="utr-qg-H0T"/>
+                        <outlet property="textFieldButton" destination="E1M-39-HoS" id="wnZ-ph-dha"/>
+                        <outlet property="textView" destination="1sU-eq-CdB" id="WRb-oP-q0P"/>
+                        <outlet property="textViewButton" destination="nxu-dT-rEJ" id="wUW-YC-1Nw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+    </scenes>
+</document>
