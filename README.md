@@ -1,5 +1,5 @@
 # EnablesReturnKeyAutomaticallyBug
-Repo demonstrating enablesReturnKeyAutomatically isn't considered when using UITextInput's replace(_ range: UITextRange, withText text: String)
+Repo demonstrating enablesReturnKeyAutomatically isn't considered when using UITextInput's `replace(_ range: UITextRange, withText text: String)`
 
 ## Replicating:
 
